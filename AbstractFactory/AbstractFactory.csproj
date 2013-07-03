@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>26801047-54da-423a-b160-4da48dcc94e8</ProjectGuid>
+    <ProjectGuid>{D8CF6EF5-EE38-4659-A4EF-93EE67F70535}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AbstractFactory</RootNamespace>
@@ -41,9 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\ICheckBox.cs" />
+    <Compile Include="Controls\IUIFactory.cs" />
+    <Compile Include="Controls\IButton.cs" />
+    <Compile Include="Controls\Linux\LinuxButton.cs" />
+    <Compile Include="Controls\Linux\LinuxCheckBox.cs" />
+    <Compile Include="Controls\Linux\LinuxUIFactory.cs" />
+    <Compile Include="Controls\Windows\WindowsButton.cs" />
+    <Compile Include="Controls\Windows\WindowsCheckBox.cs" />
+    <Compile Include="Controls\Windows\WindowsUIFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
